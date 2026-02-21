@@ -1,0 +1,17 @@
+name: Assignment Action  # Name shown in Actions tab
+
+on: [push]  # Triggers on any push to repo (main/default branch)
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Free virtual machine to run on
+    
+    steps:
+      - name: Checkout code  # Step 1: Get your repo files
+        uses: actions/checkout@v4  # Official GitHub action
+        
+      - name: 23f3002118@ds.study.iitm.ac.in  # REQUIRED: Your email here!
+        run: echo "Hello from my assignment action!"  # Simple command that runs
+        
+      - name: List files  # Optional: Extra step to make it interesting
+        run: ls -la
